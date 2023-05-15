@@ -2,6 +2,7 @@ CREATE TABLE forgot_passwords (
     `id` INT NOT NULL AUTO_INCREMENT,
     `user_id`INT NULL,
     `valid` boolean NOT NULL default 1,
+    `code` INT NOT NULL,
     `expired_at` TIMESTAMP NULL,
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP NULL,

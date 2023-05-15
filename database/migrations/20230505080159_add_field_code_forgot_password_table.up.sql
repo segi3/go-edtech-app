@@ -1,1 +1,0 @@
-ALTER TABLE `forgot_passwords` ADD `code` INT NOT NULL AFTER `valid`;
