@@ -2,7 +2,6 @@ package class_room
 
 import (
 	"database/sql"
-	"fmt"
 
 	classRoomEntity "online-course/internal/class_room/entity"
 	productEntity "online-course/internal/product/entity"
@@ -42,10 +41,6 @@ func CreateClassRoomListResponse(entity []classRoomEntity.ClassRoom) ClassRoomLi
 
 	for _, classRoom := range entity {
 		classRoom.Product.VideoURL = classRoom.Product.Video
-
-		fmt.Println(classRoom.Product.Title)
-		fmt.Println(classRoom.Product.Video)
-		fmt.Println(classRoom.Product.VideoURL)
 
 		classRoomResponse := CreateClassRoomResponse(classRoom)
 		classRoomResp = append(classRoomResp, classRoomResponse)

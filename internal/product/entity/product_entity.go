@@ -19,6 +19,7 @@ type Product struct {
 	VideoURL          *string                                `json:"video_url,omitempty" gorm:"->"`
 	Description       string                                 `json:"description"`
 	Price             int64                                  `json:"price"`
+	Duration          int64                                  `json:"duration"`
 	CreatedByID       int64                                  `json:"created_by" gorm:"column:created_by"`
 	CreatedBy         *adminEntity.Admin                     `json:"-" gorm:"foreignKey:CreatedByID;references:ID"`
 	UpdatedByID       *int64                                 `json:"updated_by"  gorm:"column:updated_by"`

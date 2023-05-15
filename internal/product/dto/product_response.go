@@ -18,6 +18,7 @@ type ProductResponseBody struct {
 	Video           string                                 `json:"video"`
 	Description     string                                 `json:"description"`
 	Price           int64                                  `json:"price"`
+	Duration        int64                                  `json:"duration"`
 	CreatedBy       *adminEntity.Admin                     `json:"created_by"`
 	UpdatedBy       *adminEntity.Admin                     `json:"updated_by"`
 	CreatedAt       sql.NullTime                           `json:"created_at"`
@@ -33,6 +34,7 @@ func CreateProductResponse(product entity.Product) ProductResponseBody {
 		Video:           *product.Video,
 		Description:     product.Description,
 		Price:           product.Price,
+		Duration:        product.Duration,
 		CreatedBy:       product.CreatedBy,
 		UpdatedBy:       product.UpdatedBy,
 		CreatedAt:       product.CreatedAt,
