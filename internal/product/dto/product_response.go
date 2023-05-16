@@ -14,7 +14,7 @@ type ProductResponseBody struct {
 	ID              int64                                  `json:"id"`
 	ProductCategory *productCategoryEntity.ProductCategory `json:"product_category"`
 	Title           string                                 `json:"title"`
-	Image           string                                 `json:"image"`
+	Thumbnail       string                                 `json:"thumbnail"`
 	Video           string                                 `json:"video"`
 	Description     string                                 `json:"description"`
 	Price           int64                                  `json:"price"`
@@ -30,7 +30,7 @@ func CreateProductResponse(product entity.Product) ProductResponseBody {
 	return ProductResponseBody{
 		ProductCategory: product.ProductCategory,
 		Title:           product.Title,
-		Image:           *product.Image,
+		Thumbnail:       *product.Thumbnail,
 		Video:           *product.Video,
 		Description:     product.Description,
 		Price:           product.Price,

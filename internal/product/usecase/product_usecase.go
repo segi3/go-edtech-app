@@ -36,16 +36,16 @@ func (usecase *ProductUseCaseImpl) Create(dto dto.ProductRequestBody) (*entity.P
 		CreatedByID:       dto.CreatedBy,
 	}
 
-	// Upload image
-	if dto.Image != nil {
-		image, err := usecase.fileUpload.Upload(*dto.Image)
+	// Upload thumbnail image
+	if dto.Thumbnail != nil {
+		image, err := usecase.fileUpload.Upload(*dto.Thumbnail)
 
 		if err != nil {
 			return nil, err
 		}
 
 		if image != nil {
-			dataProduct.Image = image
+			dataProduct.Thumbnail = image
 		}
 	}
 
@@ -115,23 +115,23 @@ func (usecase *ProductUseCaseImpl) Update(id int, dto dto.ProductRequestBody) (*
 	product.UpdatedByID = &dto.UpdatedBy
 
 	// Jika terdapat update file image
-	if dto.Image != nil {
-		image, err := usecase.fileUpload.Upload(*dto.Image)
+	if dto.Thumbnail != nil {
+		image, err := usecase.fileUpload.Upload(*dto.Thumbnail)
 
 		if err != nil {
 			return nil, err
 		}
 
-		if product.Image != nil {
+		if product.Thumbnail != nil {
 			// Delete image
-			_, err := usecase.fileUpload.Delete(*product.Image)
+			_, err := usecase.fileUpload.Delete(*product.Thumbnail)
 
 			if err != nil {
 				return nil, err
 			}
 		}
 
-		product.Image = image
+		product.Thumbnail = image
 	}
 
 	// Jika terdapat update file video

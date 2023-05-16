@@ -14,7 +14,7 @@ type Product struct {
 	ProductCategory   *productCategoryEntity.ProductCategory `json:"product_category" gorm:"foreignKey:ProductCategoryID;references:ID"`
 	ProductCategoryID int64                                  `json:"product_category_id"`
 	Title             string                                 `json:"title"`
-	Image             *string                                `json:"image"`
+	Thumbnail         *string                                `json:"thumbnail"`
 	Video             *string                                `json:"video"`
 	VideoURL          *string                                `json:"video_url,omitempty" gorm:"->"`
 	Description       string                                 `json:"description"`
