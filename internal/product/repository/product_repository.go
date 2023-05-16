@@ -3,6 +3,7 @@ package product
 import (
 	entity "edtech-app/internal/product/entity"
 	"edtech-app/pkg/utils"
+	"errors"
 
 	"gorm.io/gorm"
 )
@@ -10,6 +11,7 @@ import (
 type ProductRepository interface {
 	FindAll(offset int, limit int) []entity.Product
 	FindById(id int) (*entity.Product, error)
+	FindExist(id int) (bool, error)
 	Count() int
 	Create(entity entity.Product) (*entity.Product, error)
 	Update(entity entity.Product) (*entity.Product, error)
@@ -18,6 +20,25 @@ type ProductRepository interface {
 
 type ProductRepositoryImpl struct {
 	db *gorm.DB
+}
+
+// FindExist implements ProductRepository
+func (repository *ProductRepositoryImpl) FindExist(id int) (bool, error) {
+	var product entity.Product
+
+	res := repository.db.Model(&entity.Product{}).
+		Where("id = ? ", id).
+		First(&product)
+
+	if errors.Is(res.Error, gorm.ErrRecordNotFound) {
+		// user does not exists
+		return false, nil
+	} else if res.Error != nil {
+		// user exsist
+		return true, res.Error //  return with exist behaviour
+	}
+
+	return true, nil
 }
 
 // Count implements ProductRepository

@@ -8,6 +8,7 @@ import (
 	admin "edtech-app/internal/admin/injector"
 	cart "edtech-app/internal/cart/injector"
 	classRoom "edtech-app/internal/class_room/injector"
+	course "edtech-app/internal/course/injector"
 	dashboard "edtech-app/internal/dashboard/injector"
 	discount "edtech-app/internal/discount/injector"
 	oauth "edtech-app/internal/oauth/injector"
@@ -40,6 +41,7 @@ func main() {
 	classRoom.InitializedService(db).Route(&r.RouterGroup)
 	dashboard.InitializedService(db).Route(&r.RouterGroup)
 	user.InitializedService(db).Route(&r.RouterGroup)
+	course.InitiliazedService(db).Route(&r.RouterGroup)
 
 	r.Run()
 }
