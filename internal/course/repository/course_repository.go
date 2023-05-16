@@ -3,6 +3,7 @@ package course
 import (
 	entity "edtech-app/internal/course/entity"
 	"edtech-app/pkg/utils"
+	"errors"
 
 	"gorm.io/gorm"
 )
@@ -11,6 +12,7 @@ type CourseRepository interface {
 	FindAll(offset int, limit int) []entity.Course
 	FindById(id int) (*entity.Course, error)
 	FindByProductId(productId int) ([]entity.Course, error)
+	FindByProductIdExists(productId int) (bool, error)
 	Create(entity entity.Course) (*entity.Course, error)
 	Update(entity entity.Course) (*entity.Course, error)
 	Delete(entity entity.Course) error
@@ -18,6 +20,25 @@ type CourseRepository interface {
 
 type CourseRepositoryImpl struct {
 	db *gorm.DB
+}
+
+// FindByProductIdExists implements CourseRepository
+func (repository *CourseRepositoryImpl) FindByProductIdExists(productId int) (bool, error) {
+	var course entity.Course
+
+	res := repository.db.Model(&entity.Course{}).
+		Where("product_id = ? ", productId).
+		First(&course)
+
+	if errors.Is(res.Error, gorm.ErrRecordNotFound) {
+		// user does not exists
+		return false, nil
+	} else if res.Error != nil {
+		// some other problem
+		return true, res.Error
+	}
+
+	return true, nil // base return set to exist behaviour
 }
 
 // FindAllByProductId implements CourseRepository

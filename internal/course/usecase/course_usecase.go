@@ -56,6 +56,17 @@ func (usecase *CourseUseCaseImpl) Create(dtoInput dto.CourseBindingRequestBody) 
 		}
 	}
 
+	// check product is already have course
+	exist, err = usecase.repository.FindByProductIdExists(int(dtoInput.ProductID))
+
+	if err != nil {
+		return nil, err
+	}
+
+	if exist {
+		return nil, errors.New("product id:" + strconv.Itoa(int(dtoInput.ProductID)) + " already have a course")
+	}
+
 	// loop lesson id array and create entity within iterations
 	for _, lessonId := range dtoInput.LessonIDs {
 
