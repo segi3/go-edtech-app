@@ -1,7 +1,7 @@
 package order_detail
 
 import (
-	entity "online-course/internal/order_detail/entity"
+	entity "edtech-app/internal/order_detail/entity"
 
 	"gorm.io/gorm"
 )

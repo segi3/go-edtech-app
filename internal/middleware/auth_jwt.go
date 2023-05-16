@@ -5,8 +5,8 @@ import (
 	"os"
 	"strings"
 
-	dto "online-course/internal/oauth/dto"
-	"online-course/pkg/utils"
+	dto "edtech-app/internal/oauth/dto"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"

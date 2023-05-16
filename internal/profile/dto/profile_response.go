@@ -1,7 +1,7 @@
 package profile
 
 import (
-	userEntity "online-course/internal/user/entity"
+	userEntity "edtech-app/internal/user/entity"
 )
 
 type ProfileRespondBody struct {

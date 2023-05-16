@@ -7,7 +7,7 @@ import (
 	"os"
 	"path/filepath"
 
-	registerDto "online-course/internal/register/dto"
+	registerDto "edtech-app/internal/register/dto"
 
 	"github.com/sendgrid/sendgrid-go"
 	"github.com/sendgrid/sendgrid-go/helpers/mail"

@@ -8,9 +8,9 @@ package admin
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/admin/delivery/http"
-	admin2 "online-course/internal/admin/repository"
-	admin3 "online-course/internal/admin/usecase"
+	"edtech-app/internal/admin/delivery/http"
+	admin2 "edtech-app/internal/admin/repository"
+	admin3 "edtech-app/internal/admin/usecase"
 )
 
 // Injectors from wire.go:

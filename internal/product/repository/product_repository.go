@@ -1,8 +1,8 @@
 package product
 
 import (
-	entity "online-course/internal/product/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/product/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

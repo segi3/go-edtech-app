@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"path/filepath"
 
-	oauthDto "online-course/internal/oauth/dto"
+	oauthDto "edtech-app/internal/oauth/dto"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

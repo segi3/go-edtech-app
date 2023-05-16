@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"net/http"
 
-	dto "online-course/internal/oauth/dto"
-	usecase "online-course/internal/oauth/usecase"
-	"online-course/pkg/utils"
+	dto "edtech-app/internal/oauth/dto"
+	usecase "edtech-app/internal/oauth/usecase"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

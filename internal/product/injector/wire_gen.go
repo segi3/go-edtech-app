@@ -8,10 +8,10 @@ package product
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/product/delivery/http"
-	product2 "online-course/internal/product/repository"
-	product3 "online-course/internal/product/usecase"
-	"online-course/pkg/fileupload/cloudinary"
+	"edtech-app/internal/product/delivery/http"
+	product2 "edtech-app/internal/product/repository"
+	product3 "edtech-app/internal/product/usecase"
+	"edtech-app/pkg/fileupload/cloudinary"
 )
 
 // Injectors from wire.go:

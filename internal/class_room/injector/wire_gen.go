@@ -8,9 +8,9 @@ package class_room
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/class_room/delivery/http"
-	class_room2 "online-course/internal/class_room/repository"
-	class_room3 "online-course/internal/class_room/usecase"
+	"edtech-app/internal/class_room/delivery/http"
+	class_room2 "edtech-app/internal/class_room/repository"
+	class_room3 "edtech-app/internal/class_room/usecase"
 )
 
 // Injectors from wire.go:

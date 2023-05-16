@@ -8,9 +8,9 @@ package user
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/user/delivery/http"
-	user2 "online-course/internal/user/repository"
-	user3 "online-course/internal/user/usecase"
+	"edtech-app/internal/user/delivery/http"
+	user2 "edtech-app/internal/user/repository"
+	user3 "edtech-app/internal/user/usecase"
 )
 
 // Injectors from wire.go:

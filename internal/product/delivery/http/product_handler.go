@@ -4,10 +4,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"online-course/internal/middleware"
-	dto "online-course/internal/product/dto"
-	usecase "online-course/internal/product/usecase"
-	"online-course/pkg/utils"
+	"edtech-app/internal/middleware"
+	dto "edtech-app/internal/product/dto"
+	usecase "edtech-app/internal/product/usecase"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

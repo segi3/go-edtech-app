@@ -1,10 +1,10 @@
 package product
 
 import (
-	dto "online-course/internal/product/dto"
-	entity "online-course/internal/product/entity"
-	repository "online-course/internal/product/repository"
-	fileUpload "online-course/pkg/fileupload/cloudinary"
+	dto "edtech-app/internal/product/dto"
+	entity "edtech-app/internal/product/entity"
+	repository "edtech-app/internal/product/repository"
+	fileUpload "edtech-app/pkg/fileupload/cloudinary"
 )
 
 type ProductUseCase interface {

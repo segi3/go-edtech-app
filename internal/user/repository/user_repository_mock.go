@@ -1,7 +1,7 @@
 package user
 
 import (
-	entity "online-course/internal/user/entity"
+	entity "edtech-app/internal/user/entity"
 
 	"github.com/stretchr/testify/mock"
 )

@@ -8,11 +8,11 @@ package register
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/register/delivery/http"
-	register2 "online-course/internal/register/usecase"
-	"online-course/internal/user/repository"
-	user2 "online-course/internal/user/usecase"
-	"online-course/pkg/mail/sendgrid"
+	"edtech-app/internal/register/delivery/http"
+	register2 "edtech-app/internal/register/usecase"
+	"edtech-app/internal/user/repository"
+	user2 "edtech-app/internal/user/usecase"
+	"edtech-app/pkg/mail/sendgrid"
 )
 
 // Injectors from wire.go:

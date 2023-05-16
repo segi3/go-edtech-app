@@ -8,9 +8,9 @@ package product_category
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/product_category/delivery/http"
-	product_category2 "online-course/internal/product_category/repository"
-	product_category3 "online-course/internal/product_category/usecase"
+	"edtech-app/internal/product_category/delivery/http"
+	product_category2 "edtech-app/internal/product_category/repository"
+	product_category3 "edtech-app/internal/product_category/usecase"
 )
 
 // Injectors from wire.go:

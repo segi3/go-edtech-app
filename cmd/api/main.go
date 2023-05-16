@@ -1,23 +1,23 @@
 package main
 
 import (
-	mysql "online-course/pkg/db/mysql"
+	mysql "edtech-app/pkg/db/mysql"
 
 	"github.com/gin-gonic/gin"
 
-	admin "online-course/internal/admin/injector"
-	cart "online-course/internal/cart/injector"
-	classRoom "online-course/internal/class_room/injector"
-	dashboard "online-course/internal/dashboard/injector"
-	discount "online-course/internal/discount/injector"
-	oauth "online-course/internal/oauth/injector"
-	order "online-course/internal/order/injector"
-	product "online-course/internal/product/injector"
-	productCategory "online-course/internal/product_category/injector"
-	profile "online-course/internal/profile/injector"
-	register "online-course/internal/register/injector"
-	user "online-course/internal/user/injector"
-	webhook "online-course/internal/webhook/injector"
+	admin "edtech-app/internal/admin/injector"
+	cart "edtech-app/internal/cart/injector"
+	classRoom "edtech-app/internal/class_room/injector"
+	dashboard "edtech-app/internal/dashboard/injector"
+	discount "edtech-app/internal/discount/injector"
+	oauth "edtech-app/internal/oauth/injector"
+	order "edtech-app/internal/order/injector"
+	product "edtech-app/internal/product/injector"
+	productCategory "edtech-app/internal/product_category/injector"
+	profile "edtech-app/internal/profile/injector"
+	register "edtech-app/internal/register/injector"
+	user "edtech-app/internal/user/injector"
+	webhook "edtech-app/internal/webhook/injector"
 )
 
 func main() {

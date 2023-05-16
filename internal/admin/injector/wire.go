@@ -4,11 +4,11 @@
 package admin
 
 import (
+	handler "edtech-app/internal/admin/delivery/http"
+	repository "edtech-app/internal/admin/repository"
+	usecase "edtech-app/internal/admin/usecase"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	handler "online-course/internal/admin/delivery/http"
-	repository "online-course/internal/admin/repository"
-	usecase "online-course/internal/admin/usecase"
 )
 
 func InitializedService(db *gorm.DB) *handler.AdminHandler {

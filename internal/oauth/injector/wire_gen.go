@@ -8,13 +8,13 @@ package oauth
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/admin/repository"
-	admin2 "online-course/internal/admin/usecase"
-	"online-course/internal/oauth/delivery/http"
-	oauth2 "online-course/internal/oauth/repository"
-	oauth3 "online-course/internal/oauth/usecase"
-	"online-course/internal/user/repository"
-	user2 "online-course/internal/user/usecase"
+	"edtech-app/internal/admin/repository"
+	admin2 "edtech-app/internal/admin/usecase"
+	"edtech-app/internal/oauth/delivery/http"
+	oauth2 "edtech-app/internal/oauth/repository"
+	oauth3 "edtech-app/internal/oauth/usecase"
+	"edtech-app/internal/user/repository"
+	user2 "edtech-app/internal/user/usecase"
 )
 
 // Injectors from wire.go:

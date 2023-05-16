@@ -4,15 +4,15 @@
 package oauth
 
 import (
+	adminRepository "edtech-app/internal/admin/repository"
+	adminUseCase "edtech-app/internal/admin/usecase"
+	oauthHandler "edtech-app/internal/oauth/delivery/http"
+	oauthRepository "edtech-app/internal/oauth/repository"
+	oauthUseCase "edtech-app/internal/oauth/usecase"
+	userRepository "edtech-app/internal/user/repository"
+	userUseCase "edtech-app/internal/user/usecase"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	adminRepository "online-course/internal/admin/repository"
-	adminUseCase "online-course/internal/admin/usecase"
-	oauthHandler "online-course/internal/oauth/delivery/http"
-	oauthRepository "online-course/internal/oauth/repository"
-	oauthUseCase "online-course/internal/oauth/usecase"
-	userRepository "online-course/internal/user/repository"
-	userUseCase "online-course/internal/user/usecase"
 )
 
 func InitializedService(db *gorm.DB) *oauthHandler.OauthHandler {

@@ -3,9 +3,9 @@ package order
 import (
 	"database/sql"
 
-	discountEntity "online-course/internal/discount/entity"
-	orderDetailEntity "online-course/internal/order_detail/entity"
-	userEntity "online-course/internal/user/entity"
+	discountEntity "edtech-app/internal/discount/entity"
+	orderDetailEntity "edtech-app/internal/order_detail/entity"
+	userEntity "edtech-app/internal/user/entity"
 
 	"gorm.io/gorm"
 )

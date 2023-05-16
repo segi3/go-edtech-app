@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
-	useCase "online-course/internal/class_room/usecase"
-	"online-course/internal/middleware"
-	"online-course/pkg/utils"
+	useCase "edtech-app/internal/class_room/usecase"
+	"edtech-app/internal/middleware"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

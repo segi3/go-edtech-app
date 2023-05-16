@@ -4,11 +4,11 @@
 package discount
 
 import (
+	handler "edtech-app/internal/discount/delivery/http"
+	repository "edtech-app/internal/discount/repository"
+	useCase "edtech-app/internal/discount/usecase"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	handler "online-course/internal/discount/delivery/http"
-	repository "online-course/internal/discount/repository"
-	useCase "online-course/internal/discount/usecase"
 )
 
 func InitializedService(db *gorm.DB) *handler.DiscountHandler {

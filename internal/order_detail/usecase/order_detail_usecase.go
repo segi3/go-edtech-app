@@ -3,8 +3,8 @@ package order_detail
 import (
 	"fmt"
 
-	entity "online-course/internal/order_detail/entity"
-	repository "online-course/internal/order_detail/repository"
+	entity "edtech-app/internal/order_detail/entity"
+	repository "edtech-app/internal/order_detail/repository"
 )
 
 type OrderDetailUseCase interface {

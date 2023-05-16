@@ -1,8 +1,8 @@
 package class_room
 
 import (
-	entity "online-course/internal/class_room/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/class_room/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

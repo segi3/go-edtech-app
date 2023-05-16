@@ -1,8 +1,8 @@
 package admin
 
 import (
-	entity "online-course/internal/admin/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/admin/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

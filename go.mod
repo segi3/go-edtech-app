@@ -1,4 +1,4 @@
-module online-course
+module edtech-app
 
 go 1.20
 

@@ -3,8 +3,8 @@ package user
 import (
 	"testing"
 
-	entity "online-course/internal/user/entity"
-	repository "online-course/internal/user/repository"
+	entity "edtech-app/internal/user/entity"
+	repository "edtech-app/internal/user/repository"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

@@ -6,12 +6,12 @@ import (
 	"os"
 	"time"
 
-	adminUseCase "online-course/internal/admin/usecase"
-	dto "online-course/internal/oauth/dto"
-	entity "online-course/internal/oauth/entity"
-	repository "online-course/internal/oauth/repository"
-	userUseCase "online-course/internal/user/usecase"
-	utils "online-course/pkg/utils"
+	adminUseCase "edtech-app/internal/admin/usecase"
+	dto "edtech-app/internal/oauth/dto"
+	entity "edtech-app/internal/oauth/entity"
+	repository "edtech-app/internal/oauth/repository"
+	userUseCase "edtech-app/internal/user/usecase"
+	utils "edtech-app/pkg/utils"
 
 	"github.com/golang-jwt/jwt/v5"
 	"golang.org/x/crypto/bcrypt"

@@ -4,11 +4,11 @@
 package user
 
 import (
+	handler "edtech-app/internal/user/delivery/http"
+	repository "edtech-app/internal/user/repository"
+	useCase "edtech-app/internal/user/usecase"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	handler "online-course/internal/user/delivery/http"
-	repository "online-course/internal/user/repository"
-	useCase "online-course/internal/user/usecase"
 )
 
 func InitializedService(db *gorm.DB) *handler.UserHandler {

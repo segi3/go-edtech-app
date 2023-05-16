@@ -10,13 +10,13 @@ package register
 // 	registerHandler.NewRegisterHandler(registerUseCase).Route(&r.RouterGroup)
 
 import (
+	handler "edtech-app/internal/register/delivery/http"
+	useCase "edtech-app/internal/register/usecase"
+	userRepository "edtech-app/internal/user/repository"
+	userUseCase "edtech-app/internal/user/usecase"
+	mail "edtech-app/pkg/mail/sendgrid"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	handler "online-course/internal/register/delivery/http"
-	useCase "online-course/internal/register/usecase"
-	userRepository "online-course/internal/user/repository"
-	userUseCase "online-course/internal/user/usecase"
-	mail "online-course/pkg/mail/sendgrid"
 )
 
 func InitializedService(db *gorm.DB) *handler.RegisterHandler {

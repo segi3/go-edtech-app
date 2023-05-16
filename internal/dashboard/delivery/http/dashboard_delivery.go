@@ -3,9 +3,9 @@ package dashboard
 import (
 	"net/http"
 
-	useCase "online-course/internal/dashboard/usecase"
-	"online-course/internal/middleware"
-	"online-course/pkg/utils"
+	useCase "edtech-app/internal/dashboard/usecase"
+	"edtech-app/internal/middleware"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

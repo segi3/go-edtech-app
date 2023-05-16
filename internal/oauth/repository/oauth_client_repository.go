@@ -1,7 +1,7 @@
 package oauth
 
 import (
-	oauth "online-course/internal/oauth/entity"
+	oauth "edtech-app/internal/oauth/entity"
 
 	"gorm.io/gorm"
 )

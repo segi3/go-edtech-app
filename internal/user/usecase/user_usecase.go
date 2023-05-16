@@ -4,10 +4,10 @@ import (
 	"errors"
 	"fmt"
 
-	dto "online-course/internal/user/dto"
-	entity "online-course/internal/user/entity"
-	repository "online-course/internal/user/repository"
-	utils "online-course/pkg/utils"
+	dto "edtech-app/internal/user/dto"
+	entity "edtech-app/internal/user/entity"
+	repository "edtech-app/internal/user/repository"
+	utils "edtech-app/pkg/utils"
 
 	"golang.org/x/crypto/bcrypt"
 	"gorm.io/gorm"

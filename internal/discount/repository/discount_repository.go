@@ -1,8 +1,8 @@
 package discount
 
 import (
-	entity "online-course/internal/discount/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/discount/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

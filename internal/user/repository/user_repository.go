@@ -1,8 +1,8 @@
 package user
 
 import (
-	entity "online-course/internal/user/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/user/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

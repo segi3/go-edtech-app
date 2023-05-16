@@ -3,9 +3,9 @@ package class_room
 import (
 	"database/sql"
 
-	classRoomEntity "online-course/internal/class_room/entity"
-	productEntity "online-course/internal/product/entity"
-	userEntity "online-course/internal/user/entity"
+	classRoomEntity "edtech-app/internal/class_room/entity"
+	productEntity "edtech-app/internal/product/entity"
+	userEntity "edtech-app/internal/user/entity"
 
 	"gorm.io/gorm"
 )

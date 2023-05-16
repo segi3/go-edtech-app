@@ -3,8 +3,8 @@ package cart
 import (
 	"database/sql"
 
-	productEntity "online-course/internal/product/entity"
-	userEntity "online-course/internal/user/entity"
+	productEntity "edtech-app/internal/product/entity"
+	userEntity "edtech-app/internal/user/entity"
 )
 
 type Cart struct {

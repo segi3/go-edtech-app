@@ -6,10 +6,10 @@ import (
 	"os"
 	"strings"
 
-	classRoomDto "online-course/internal/class_room/dto"
-	classRoomUseCase "online-course/internal/class_room/usecase"
-	orderDto "online-course/internal/order/dto"
-	orderUseCase "online-course/internal/order/usecase"
+	classRoomDto "edtech-app/internal/class_room/dto"
+	classRoomUseCase "edtech-app/internal/class_room/usecase"
+	orderDto "edtech-app/internal/order/dto"
+	orderUseCase "edtech-app/internal/order/usecase"
 
 	"github.com/xendit/xendit-go"
 	"github.com/xendit/xendit-go/invoice"

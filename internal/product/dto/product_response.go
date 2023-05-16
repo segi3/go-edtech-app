@@ -3,9 +3,9 @@ package product
 import (
 	"database/sql"
 
-	adminEntity "online-course/internal/admin/entity"
-	entity "online-course/internal/product/entity"
-	productCategoryEntity "online-course/internal/product_category/entity"
+	adminEntity "edtech-app/internal/admin/entity"
+	entity "edtech-app/internal/product/entity"
+	productCategoryEntity "edtech-app/internal/product_category/entity"
 
 	"gorm.io/gorm"
 )

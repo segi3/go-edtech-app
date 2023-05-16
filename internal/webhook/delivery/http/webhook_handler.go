@@ -3,9 +3,9 @@ package webhook
 import (
 	"net/http"
 
-	dto "online-course/internal/webhook/dto"
-	useCase "online-course/internal/webhook/usecase"
-	"online-course/pkg/utils"
+	dto "edtech-app/internal/webhook/dto"
+	useCase "edtech-app/internal/webhook/usecase"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

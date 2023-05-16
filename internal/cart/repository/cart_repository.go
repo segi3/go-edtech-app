@@ -1,8 +1,8 @@
 package cart
 
 import (
-	entity "online-course/internal/cart/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/cart/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

@@ -3,9 +3,9 @@ package register
 import (
 	"net/http"
 
-	registerUseCase "online-course/internal/register/usecase"
-	userDto "online-course/internal/user/dto"
-	"online-course/pkg/utils"
+	registerUseCase "edtech-app/internal/register/usecase"
+	userDto "edtech-app/internal/user/dto"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

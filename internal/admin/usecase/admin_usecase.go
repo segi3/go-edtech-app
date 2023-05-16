@@ -1,9 +1,9 @@
 package admin
 
 import (
-	dto "online-course/internal/admin/dto"
-	entity "online-course/internal/admin/entity"
-	repository "online-course/internal/admin/repository"
+	dto "edtech-app/internal/admin/dto"
+	entity "edtech-app/internal/admin/entity"
+	repository "edtech-app/internal/admin/repository"
 
 	"golang.org/x/crypto/bcrypt"
 )

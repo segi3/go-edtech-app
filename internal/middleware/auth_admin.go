@@ -3,7 +3,7 @@ package middleware
 import (
 	"net/http"
 
-	"online-course/pkg/utils"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

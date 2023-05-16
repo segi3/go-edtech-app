@@ -1,10 +1,10 @@
 package register
 
 import (
-	dto "online-course/internal/register/dto"
-	userDto "online-course/internal/user/dto"
-	userUseCase "online-course/internal/user/usecase"
-	mail "online-course/pkg/mail/sendgrid"
+	dto "edtech-app/internal/register/dto"
+	userDto "edtech-app/internal/user/dto"
+	userUseCase "edtech-app/internal/user/usecase"
+	mail "edtech-app/pkg/mail/sendgrid"
 )
 
 type RegisterUseCase interface {

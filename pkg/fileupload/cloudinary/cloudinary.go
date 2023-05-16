@@ -6,7 +6,7 @@ import (
 	"mime/multipart"
 	"os"
 
-	"online-course/pkg/utils"
+	"edtech-app/pkg/utils"
 
 	"github.com/cloudinary/cloudinary-go/v2"
 	"github.com/cloudinary/cloudinary-go/v2/api/uploader"

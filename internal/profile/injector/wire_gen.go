@@ -8,10 +8,10 @@ package profile
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/profile/delivery/http"
-	profile2 "online-course/internal/profile/usecase"
-	"online-course/internal/user/repository"
-	user2 "online-course/internal/user/usecase"
+	"edtech-app/internal/profile/delivery/http"
+	profile2 "edtech-app/internal/profile/usecase"
+	"edtech-app/internal/user/repository"
+	user2 "edtech-app/internal/user/usecase"
 )
 
 // Injectors from wire.go:

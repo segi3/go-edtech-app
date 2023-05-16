@@ -3,9 +3,9 @@ package class_room
 import (
 	"errors"
 
-	dto "online-course/internal/class_room/dto"
-	entity "online-course/internal/class_room/entity"
-	repository "online-course/internal/class_room/repository"
+	dto "edtech-app/internal/class_room/dto"
+	entity "edtech-app/internal/class_room/entity"
+	repository "edtech-app/internal/class_room/repository"
 
 	"gorm.io/gorm"
 )

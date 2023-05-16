@@ -3,7 +3,7 @@ package discount
 import (
 	"database/sql"
 
-	adminEntity "online-course/internal/admin/entity"
+	adminEntity "edtech-app/internal/admin/entity"
 
 	"gorm.io/gorm"
 )

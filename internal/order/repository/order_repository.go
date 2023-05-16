@@ -1,8 +1,8 @@
 package order
 
 import (
-	entity "online-course/internal/order/entity"
-	"online-course/pkg/utils"
+	entity "edtech-app/internal/order/entity"
+	"edtech-app/pkg/utils"
 
 	"gorm.io/gorm"
 )

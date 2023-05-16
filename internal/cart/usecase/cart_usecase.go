@@ -3,9 +3,9 @@ package cart
 import (
 	"errors"
 
-	dto "online-course/internal/cart/dto"
-	entity "online-course/internal/cart/entity"
-	repository "online-course/internal/cart/repository"
+	dto "edtech-app/internal/cart/dto"
+	entity "edtech-app/internal/cart/entity"
+	repository "edtech-app/internal/cart/repository"
 )
 
 type CartUseCase interface {

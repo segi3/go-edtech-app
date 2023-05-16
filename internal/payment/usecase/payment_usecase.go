@@ -3,7 +3,7 @@ package payment
 import (
 	"os"
 
-	dto "online-course/internal/payment/dto"
+	dto "edtech-app/internal/payment/dto"
 
 	"github.com/xendit/xendit-go"
 	"github.com/xendit/xendit-go/invoice"

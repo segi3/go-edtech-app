@@ -1,11 +1,11 @@
 package dashboard
 
 import (
-	adminUseCase "online-course/internal/admin/usecase"
-	dto "online-course/internal/dashboard/dto"
-	orderUseCase "online-course/internal/order/usecase"
-	productUseCase "online-course/internal/product/usecase"
-	userUseCase "online-course/internal/user/usecase"
+	adminUseCase "edtech-app/internal/admin/usecase"
+	dto "edtech-app/internal/dashboard/dto"
+	orderUseCase "edtech-app/internal/order/usecase"
+	productUseCase "edtech-app/internal/product/usecase"
+	userUseCase "edtech-app/internal/user/usecase"
 )
 
 type DashboardUseCase interface {

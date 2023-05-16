@@ -1,9 +1,9 @@
 package product_category
 
 import (
-	dto "online-course/internal/product_category/dto"
-	entity "online-course/internal/product_category/entity"
-	repository "online-course/internal/product_category/repository"
+	dto "edtech-app/internal/product_category/dto"
+	entity "edtech-app/internal/product_category/entity"
+	repository "edtech-app/internal/product_category/repository"
 )
 
 type ProductCategoryUseCase interface {

@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"strconv"
 
-	dto "online-course/internal/admin/dto"
-	usecase "online-course/internal/admin/usecase"
-	"online-course/internal/middleware"
-	"online-course/pkg/utils"
+	dto "edtech-app/internal/admin/dto"
+	usecase "edtech-app/internal/admin/usecase"
+	"edtech-app/internal/middleware"
+	"edtech-app/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 	"gorm.io/gorm"

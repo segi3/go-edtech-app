@@ -8,19 +8,19 @@ package order
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/cart/repository"
-	cart2 "online-course/internal/cart/usecase"
-	"online-course/internal/discount/repository"
-	discount2 "online-course/internal/discount/usecase"
-	"online-course/internal/order/delivery/http"
-	order2 "online-course/internal/order/repository"
-	order3 "online-course/internal/order/usecase"
-	"online-course/internal/order_detail/repository"
-	order_detail2 "online-course/internal/order_detail/usecase"
-	"online-course/internal/payment/usecase"
-	"online-course/internal/product/repository"
-	product2 "online-course/internal/product/usecase"
-	"online-course/pkg/fileupload/cloudinary"
+	"edtech-app/internal/cart/repository"
+	cart2 "edtech-app/internal/cart/usecase"
+	"edtech-app/internal/discount/repository"
+	discount2 "edtech-app/internal/discount/usecase"
+	"edtech-app/internal/order/delivery/http"
+	order2 "edtech-app/internal/order/repository"
+	order3 "edtech-app/internal/order/usecase"
+	"edtech-app/internal/order_detail/repository"
+	order_detail2 "edtech-app/internal/order_detail/usecase"
+	"edtech-app/internal/payment/usecase"
+	"edtech-app/internal/product/repository"
+	product2 "edtech-app/internal/product/usecase"
+	"edtech-app/pkg/fileupload/cloudinary"
 )
 
 // Injectors from wire.go:

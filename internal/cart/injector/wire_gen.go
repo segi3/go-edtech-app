@@ -8,9 +8,9 @@ package Cart
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/cart/delivery/http"
-	cart2 "online-course/internal/cart/repository"
-	cart3 "online-course/internal/cart/usecase"
+	"edtech-app/internal/cart/delivery/http"
+	cart2 "edtech-app/internal/cart/repository"
+	cart3 "edtech-app/internal/cart/usecase"
 )
 
 // Injectors from wire.go:

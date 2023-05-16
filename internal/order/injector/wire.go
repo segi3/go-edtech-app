@@ -4,21 +4,21 @@
 package order
 
 import (
+	cartRepository "edtech-app/internal/cart/repository"
+	cartUseCase "edtech-app/internal/cart/usecase"
+	discountRepository "edtech-app/internal/discount/repository"
+	discountUseCase "edtech-app/internal/discount/usecase"
+	handler "edtech-app/internal/order/delivery/http"
+	repository "edtech-app/internal/order/repository"
+	useCase "edtech-app/internal/order/usecase"
+	orderDetailRepository "edtech-app/internal/order_detail/repository"
+	orderDetailUseCase "edtech-app/internal/order_detail/usecase"
+	paymentUseCase "edtech-app/internal/payment/usecase"
+	productRepository "edtech-app/internal/product/repository"
+	productUseCase "edtech-app/internal/product/usecase"
+	fileUpload "edtech-app/pkg/fileupload/cloudinary"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	cartRepository "online-course/internal/cart/repository"
-	cartUseCase "online-course/internal/cart/usecase"
-	discountRepository "online-course/internal/discount/repository"
-	discountUseCase "online-course/internal/discount/usecase"
-	handler "online-course/internal/order/delivery/http"
-	repository "online-course/internal/order/repository"
-	useCase "online-course/internal/order/usecase"
-	orderDetailRepository "online-course/internal/order_detail/repository"
-	orderDetailUseCase "online-course/internal/order_detail/usecase"
-	paymentUseCase "online-course/internal/payment/usecase"
-	productRepository "online-course/internal/product/repository"
-	productUseCase "online-course/internal/product/usecase"
-	fileUpload "online-course/pkg/fileupload/cloudinary"
 )
 
 func InitializedService(db *gorm.DB) *handler.OrderHandler {

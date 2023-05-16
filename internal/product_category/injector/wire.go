@@ -4,11 +4,11 @@
 package product_category
 
 import (
+	handler "edtech-app/internal/product_category/delivery/http"
+	repository "edtech-app/internal/product_category/repository"
+	usecase "edtech-app/internal/product_category/usecase"
 	"github.com/google/wire"
 	"gorm.io/gorm"
-	handler "online-course/internal/product_category/delivery/http"
-	repository "online-course/internal/product_category/repository"
-	usecase "online-course/internal/product_category/usecase"
 )
 
 func InitializedService(db *gorm.DB) *handler.ProductCategoryHandler {

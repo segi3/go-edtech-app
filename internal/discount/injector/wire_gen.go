@@ -8,9 +8,9 @@ package discount
 
 import (
 	"gorm.io/gorm"
-	"online-course/internal/discount/delivery/http"
-	discount2 "online-course/internal/discount/repository"
-	discount3 "online-course/internal/discount/usecase"
+	"edtech-app/internal/discount/delivery/http"
+	discount2 "edtech-app/internal/discount/repository"
+	discount3 "edtech-app/internal/discount/usecase"
 )
 
 // Injectors from wire.go:

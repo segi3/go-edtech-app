@@ -4,9 +4,9 @@ import (
 	"database/sql"
 	"errors"
 
-	dto "online-course/internal/discount/dto"
-	entity "online-course/internal/discount/entity"
-	repository "online-course/internal/discount/repository"
+	dto "edtech-app/internal/discount/dto"
+	entity "edtech-app/internal/discount/entity"
+	repository "edtech-app/internal/discount/repository"
 )
 
 type DiscountUseCase interface {

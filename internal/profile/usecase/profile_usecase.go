@@ -1,8 +1,8 @@
 package profile
 
 import (
-	dto "online-course/internal/profile/dto"
-	userUseCase "online-course/internal/user/usecase"
+	dto "edtech-app/internal/profile/dto"
+	userUseCase "edtech-app/internal/user/usecase"
 )
 
 type ProfileUseCase interface {
