@@ -6,6 +6,7 @@ import (
 	repository "edtech-app/internal/course/repository"
 	lessonEntity "edtech-app/internal/lesson/entity"
 	lessonUseCase "edtech-app/internal/lesson/usecase"
+	productEntity "edtech-app/internal/product/entity"
 	productUseCase "edtech-app/internal/product/usecase"
 	fileUpload "edtech-app/pkg/fileupload/cloudinary"
 	"errors"
@@ -14,8 +15,8 @@ import (
 )
 
 type CourseUseCase interface {
-	FindAll(offset int, limit int) []entity.Course
-	FindById(id int) (*entity.Course, error)
+	FindAll(offset int, limit int) []productEntity.Product
+	FindByProductId(id int) (*dto.CourseResponseBody, error)
 	Create(dto dto.CourseBindingRequestBody) (*dto.CourseResponseBody, error)
 	Update(id int, dto dto.CourseBindingRequestBody) (*entity.Course, error)
 	Delete(id int) error
@@ -80,7 +81,6 @@ func (usecase *CourseUseCaseImpl) Create(dtoInput dto.CourseBindingRequestBody) 
 	}
 
 	// return response course
-	product, _ := usecase.productUseCase.FindById(int(dtoInput.ProductID))
 	courses, _ := usecase.repository.FindByProductId(int(dtoInput.ProductID))
 
 	var lessons []lessonEntity.Lesson
@@ -90,16 +90,12 @@ func (usecase *CourseUseCaseImpl) Create(dtoInput dto.CourseBindingRequestBody) 
 	fmt.Println(lessons)
 
 	courseResponse := dto.CourseResponseBody{
-		Product: *product,
+		Product: *courses[0].Product,
 		Lessons: lessons,
 	}
 
 	return &courseResponse, nil
 
-}
-
-func Itoa(i int64) {
-	panic("unimplemented")
 }
 
 // Delete implements CourseUseCase
@@ -121,13 +117,39 @@ func (usecase *CourseUseCaseImpl) Delete(id int) error {
 }
 
 // FindAll implements CourseUseCase
-func (usecase *CourseUseCaseImpl) FindAll(offset int, limit int) []entity.Course {
-	return usecase.repository.FindAll(offset, limit)
+func (usecase *CourseUseCaseImpl) FindAll(offset int, limit int) []productEntity.Product {
+	return usecase.productUseCase.FindAll(offset, limit)
 }
 
 // FindById implements CourseUseCase
-func (usecase *CourseUseCaseImpl) FindById(id int) (*entity.Course, error) {
-	return usecase.repository.FindById(id)
+func (usecase *CourseUseCaseImpl) FindByProductId(id int) (*dto.CourseResponseBody, error) {
+
+	// check if product exists
+	exist, err := usecase.repository.FindByProductIdExists(id)
+
+	if err != nil {
+		return nil, err
+	}
+
+	if !exist {
+		return nil, errors.New("product id:" + strconv.Itoa(id) + " does not exists")
+	}
+
+	// return response course
+	courses, _ := usecase.repository.FindByProductId(id)
+
+	var lessons []lessonEntity.Lesson
+	for _, course := range courses {
+		lessons = append(lessons, *course.Lesson)
+	}
+	fmt.Println(lessons)
+
+	courseResponse := dto.CourseResponseBody{
+		Product: *courses[0].Product,
+		Lessons: lessons,
+	}
+
+	return &courseResponse, nil
 }
 
 // Update implements CourseUseCase
