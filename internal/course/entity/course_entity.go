@@ -11,10 +11,10 @@ import (
 )
 
 type Course struct {
-	ID       int64                `json:"id"`
-	Lesson   *lessonEntity.Lesson `json:"leson" gorm:"foreignKey:LessonID;references:ID"`
-	LessonID int64                `json:"lesson_id"`
-	// Lessons     []lessonEntity.Lesson  `json:"lessons"`
+	ID          int64                  `json:"id"`
+	Lesson      *lessonEntity.Lesson   `json:"leson" gorm:"foreignKey:LessonID;references:ID"`
+	LessonID    int64                  `json:"lesson_id"`
+	Index       *int64                 `json:"index"`
 	Product     *productEntity.Product `json:"product" gorm:"foreignKey:ProductID;references:ID"`
 	ProductID   int64                  `json:"product_id"`
 	CreatedByID *int64                 `json:"created_by" gorm:"column:created_by"`

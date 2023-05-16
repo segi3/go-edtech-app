@@ -10,6 +10,7 @@ import (
 
 type Lesson struct {
 	ID           int64              `json:"id"`
+	Index        *int64             `json:"index" gorm:"->"`
 	Title        string             `json:"title"`
 	VideoContent *string            `json:"video_content"`
 	Description  string             `json:"description"`

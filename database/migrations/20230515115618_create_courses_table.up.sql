@@ -2,6 +2,7 @@ CREATE TABLE courses (
     `id` INT NOT NULL AUTO_INCREMENT,
     `lesson_id`INT NULL,
     `product_id`INT NULL,
+    `index` INT NOT NULL,
 
     `created_by` INT NULL,
     `updated_by` INT NULL,

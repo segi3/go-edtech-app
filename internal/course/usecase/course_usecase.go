@@ -10,7 +10,6 @@ import (
 	productUseCase "edtech-app/internal/product/usecase"
 	fileUpload "edtech-app/pkg/fileupload/cloudinary"
 	"errors"
-	"fmt"
 	"strconv"
 )
 
@@ -68,12 +67,20 @@ func (usecase *CourseUseCaseImpl) Create(dtoInput dto.CourseBindingRequestBody) 
 		return nil, errors.New("product id:" + strconv.Itoa(int(dtoInput.ProductID)) + " already have a course")
 	}
 
+	// validate order indexes, no duplicate and starts from 1 until n
+	for _, index := range dtoInput.LessonIndex {
+		if int(index) < 1 || int(index) > len(dtoInput.LessonIndex) {
+			return nil, errors.New("Invalid index:" + strconv.Itoa(int(index)))
+		}
+	}
+
 	// loop lesson id array and create entity within iterations
-	for _, lessonId := range dtoInput.LessonIDs {
+	for i, lessonId := range dtoInput.LessonIDs {
 
 		courseData := entity.Course{
 			LessonID:    lessonId,
 			ProductID:   dtoInput.ProductID,
+			Index:       &dtoInput.LessonIndex[i],
 			CreatedByID: &dtoInput.CreatedBy,
 		}
 
@@ -85,9 +92,9 @@ func (usecase *CourseUseCaseImpl) Create(dtoInput dto.CourseBindingRequestBody) 
 
 	var lessons []lessonEntity.Lesson
 	for _, course := range courses {
+		course.Lesson.Index = course.Index
 		lessons = append(lessons, *course.Lesson)
 	}
-	fmt.Println(lessons)
 
 	courseResponse := dto.CourseResponseBody{
 		Product: *courses[0].Product,
@@ -140,9 +147,9 @@ func (usecase *CourseUseCaseImpl) FindByProductId(id int) (*dto.CourseResponseBo
 
 	var lessons []lessonEntity.Lesson
 	for _, course := range courses {
+		course.Lesson.Index = course.Index
 		lessons = append(lessons, *course.Lesson)
 	}
-	fmt.Println(lessons)
 
 	courseResponse := dto.CourseResponseBody{
 		Product: *courses[0].Product,
